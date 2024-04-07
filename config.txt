@@ -1,2 +1,2 @@
-router ospf 7
+router ospf 8
 network 0.0.0.0 255.255.255.255 area 0
