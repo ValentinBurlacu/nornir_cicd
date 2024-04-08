@@ -130,56 +130,56 @@
 #         role: "Spoke"
 #         dmvpn: "yes"
 
-vios1:
-    # hostname: "192.168.1.135"
-    hostname: "vios1"
-    groups:
-        - cisco_group
-        - spine
-    data:
-        location: "West"
-        layer: "Spine"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Spine"
+# vios1:
+#     # hostname: "192.168.1.135"
+#     hostname: "vios1"
+#     groups:
+#         - cisco_group
+#         - spine
+#     data:
+#         location: "West"
+#         layer: "Spine"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Spine"
 
-vios2:
-    # hostname: "192.168.1.136"
-    hostname: "vios2"
-    groups:
-        - cisco_group
-        - spine
-    data:
-        location: "West"
-        layer: "Spine"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Spine"
+# vios2:
+#     # hostname: "192.168.1.136"
+#     hostname: "vios2"
+#     groups:
+#         - cisco_group
+#         - spine
+#     data:
+#         location: "West"
+#         layer: "Spine"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Spine"
 
-vios3:
-    # hostname: "192.168.1.137"
-    hostname: "vios3"
-    groups:
-        - cisco_group
-        - leaf
-    data:
-        location: "West"
-        layer: "Leaf"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Leaf"
+# vios3:
+#     # hostname: "192.168.1.137"
+#     hostname: "vios3"
+#     groups:
+#         - cisco_group
+#         - leaf
+#     data:
+#         location: "West"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Leaf"
 
-vios4:
-    hostname: "192.168.1.138"
-    groups:
-        - cisco_group
-        - leaf
-    data:
-        location: "West"
-        layer: "Leaf"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Leaf"
+# vios4:
+#     hostname: "192.168.1.138"
+#     groups:
+#         - cisco_group
+#         - leaf
+#     data:
+#         location: "West"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Leaf"
 
 # vios5:
 #     hostname: "192.168.1.139"
@@ -296,30 +296,30 @@ vios4:
 #     data:
 
 
-# vios-p1:
-#     hostname: "vios-p1"
-#     address: "192.168.1.165"
-#     groups:
-#         - cisco_group
-#         - spine
-#     data:
-#         # location: "West"
+vios-p1:
+    hostname: "vios-p1"
+    address: "192.168.1.165"
+    groups:
+        - cisco_group
+        - spine
+    data:
+        # location: "West"
 
-# vios-p2:
-#     hostname: "vios-p2"
-#     address: "192.168.1.166"
-#     groups:
-#         - cisco_group
-#         - spine
-#     data: {}
+vios-p2:
+    hostname: "vios-p2"
+    address: "192.168.1.166"
+    groups:
+        - cisco_group
+        - spine
+    data: {}
 
-# vios-p3:
-#     hostname: "vios-p3"
-#     address: "192.168.1.167"
-#     groups:
-#         - cisco_group
-#         - spine
-#     data: {}
+vios-p3:
+    hostname: "vios-p3"
+    address: "192.168.1.167"
+    groups:
+        - cisco_group
+        - spine
+    data: {}
 
 # vios-t1:
 #     hostname: "vios-t1"

@@ -4,7 +4,7 @@
 inventory:
     plugin: SimpleInventory
     options:
-        host_file: "_hosts.yaml"
+        host_file: "_test_hosts.yaml"
         group_file: "_groups.yaml"
         defaults_file: "_defaults.yaml"
         # connection_options:

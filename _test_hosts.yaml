@@ -1,0 +1,346 @@
+---
+# core1:
+#     hostname: "192.168.1.157"
+#     groups:
+#         - csr_group
+# core2:
+#     hostname: "192.168.1.158"
+#     groups:
+#         - csr_group
+# core3:
+#     hostname: "192.168.1.159"
+#     groups:
+#         - csr_group
+# core4:
+#     hostname: "192.168.1.160"
+#     groups:
+#         - csr_group
+# edge5:
+#     hostname: "192.168.1.161"
+#     groups:
+#         - csr_group
+# edge6:
+#     hostname: "192.168.1.162"
+#     groups:
+#         - csr_group
+# edge7:
+#     hostname: "192.168.1.163"
+#     groups:
+#         - csr_group
+# edge8:
+#     hostname: "192.168.1.164"
+#     groups:
+#         - csr_group
+
+# nxos1:
+#     hostname: "192.168.1.151"
+#     groups:
+#         - cisco_nxos_group
+#     data:
+#         role: "Spine"
+# nxos2:
+#     hostname: "192.168.1.152"
+#     groups:
+#         - cisco_nxos_group
+#     data:
+#         role: "Spine"
+
+# nxos3:
+#     hostname: "192.168.1.153"
+#     groups:
+#         - cisco_nxos_group
+#     data:
+#         role: "Leaf"
+
+# nxos4:
+#     hostname: "192.168.1.154"
+#     groups:
+#         - cisco_nxos_group
+#     data:
+#         role: "Leaf"
+
+# nxos5:
+#     hostname: "192.168.1.155"
+#     groups:
+#         - cisco_nxos_group
+#     data:
+#         role: "Leaf"
+
+# nxos6:
+#     hostname: "192.168.1.156"
+#     groups:
+#         - cisco_nxos_group
+#     data:
+#         role: "Leaf"
+
+# csr1:
+#     hostname: "192.168.1.140"
+#     groups:
+#         - csr_group
+
+# csr2:
+#     hostname: "192.168.1.141"
+#     groups:
+#         - csr_group
+
+# xrv1:
+#     hostname: "192.168.1.142"
+#     groups:
+#         - xrv_group
+
+# xrv2:
+#     hostname: "192.168.1.143"
+#     groups:
+#         - xrv_group
+
+# xrv3:
+#     hostname: "192.168.1.144"
+#     groups:
+#         - xrv_group
+
+# vios11:
+#     hostname: vios11
+#     groups:
+#         - cisco_vios_group
+#     data:
+#         role: "Hub"
+#         dmvpn: "yes"
+
+# vios12:
+#     hostname: vios12
+#     groups:
+#         - cisco_vios_group
+#     data:
+#         role: "Spoke"
+#         dmvpn: "yes"
+
+# vios13:
+#     hostname: vios13
+#     groups:
+#         - cisco_vios_group
+#     data:
+#         role: "Spoke"
+#         dmvpn: "yes"
+
+# vios14:
+#     hostname: vios14
+#     groups:
+#         - cisco_vios_group
+#     data:
+#         role: "Spoke"
+#         dmvpn: "yes"
+
+# vios1:
+#     # hostname: "192.168.1.135"
+#     hostname: "vios1"
+#     groups:
+#         - cisco_group
+#         - spine
+#     data:
+#         location: "West"
+#         layer: "Spine"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Spine"
+
+# vios2:
+#     # hostname: "192.168.1.136"
+#     hostname: "vios2"
+#     groups:
+#         - cisco_group
+#         - spine
+#     data:
+#         location: "West"
+#         layer: "Spine"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Spine"
+
+# vios3:
+#     # hostname: "192.168.1.137"
+#     hostname: "vios3"
+#     groups:
+#         - cisco_group
+#         - leaf
+#     data:
+#         location: "West"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Leaf"
+
+# vios4:
+#     hostname: "192.168.1.138"
+#     groups:
+#         - cisco_group
+#         - leaf
+#     data:
+#         location: "West"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Leaf"
+
+# vios5:
+#     hostname: "192.168.1.139"
+#     groups:
+#         - cisco_group
+#     data:
+#         location: "East"
+#         layer: "Spine"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Leaf"
+
+# vios6:
+#     hostname: "192.168.1.140"
+#     groups:
+#         - cisco_group
+#     data:
+#         location: "East"
+#         layer: "Spine"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+#         role: "Leaf"
+
+# ceos7:
+#     hostname: "192.168.1.141"
+#     username: "arista"
+#     password: "arista"
+#     groups:
+#         - arista_group
+#     data:
+#         location: "East"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65004"
+
+# ceos8:
+#     hostname: "192.168.1.142"
+#     username: "arista"
+#     password: "arista"
+#     groups:
+#         - arista_group
+#     data:
+#         location: "East"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65004"
+
+# vios7:
+#     hostname: "192.168.1.141"
+#     groups:
+#         - ios_group
+#     data:
+#         location: "East"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+
+# vios8:
+#     hostname: "192.168.1.142"
+#     groups:
+#         - ios_group
+#     data:
+#         location: "East"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65001"
+
+# iou1:
+#     hostname: "192.168.1.143"
+#     groups:
+#         - cisco_group
+#     data:
+#         role: "Spine"
+
+# iou2:
+#     hostname: "192.168.1.144"
+#     groups:
+#         - cisco_group
+#     data:
+#         role: "Spine"
+
+# iou3:
+#     hostname: "192.168.1.145"
+#     groups:
+#         - cisco_group
+#     data:
+#         role: "Leaf"
+
+# iou4:
+#     hostname: "192.168.1.146"
+#     groups:
+#         - cisco_group
+#     data:
+#         role: "Leaf"
+
+# iou5:
+#     hostname: "192.168.1.147"
+#     groups:
+#         - cisco_group
+#     data:
+#         role: "Leaf"
+
+# iou6:
+#     hostname: "192.168.1.148"
+#     groups:
+#         - cisco_group
+#     data:
+#         role: "Leaf"
+
+# jun1:
+#     hostname: "192.168.1.139"
+#     groups:
+#         - junos_group
+#     data:
+
+
+# vios-p1:
+#     hostname: "vios-p1"
+#     address: "192.168.1.165"
+#     groups:
+#         - cisco_group
+#         - spine
+#     data:
+#         # location: "West"
+
+# vios-p2:
+#     hostname: "vios-p2"
+#     address: "192.168.1.166"
+#     groups:
+#         - cisco_group
+#         - spine
+#     data: {}
+
+# vios-p3:
+#     hostname: "vios-p3"
+#     address: "192.168.1.167"
+#     groups:
+#         - cisco_group
+#         - spine
+#     data: {}
+
+vios-t1:
+    hostname: "vios-t1"
+    address: "192.168.1.168"
+    groups:
+        - cisco_group
+        - spine
+    data: {}
+
+vios-t2:
+    hostname: "vios-t2"
+    address: "192.168.1.169"
+    groups:
+        - cisco_group
+        - spine
+    data: {}
+
+vios-t3:
+    hostname: "vios-t3"
+    address: "192.168.1.170"
+    groups:
+        - cisco_group
+        - spine
+    data: {}

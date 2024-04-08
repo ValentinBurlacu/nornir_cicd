@@ -3,13 +3,17 @@ Author: Valentin
 '''
 
 import os
+import sys
 from nornir import InitNornir
 from nornir_utils.plugins.functions import print_result
 from nornir_scrapli.tasks import send_command
 
 # cf = "/Volumes/t7-2tb-blue/files/_drive_dropbox_files/Dropbox/develop/net_auto/_config.yaml"
 # nr = InitNornir(config_file=cf)
-nr = InitNornir(config_file="_config.yaml")
+# nr = InitNornir(config_file="_config.yaml")
+
+config_file=sys.argv[1]
+nr = InitNornir(config_file=config_file)
 
 nr.inventory.defaults.username = os.getenv("NORNIR_USERNAME")
 nr.inventory.defaults.password = os.getenv("NORNIR_PASSWORD")
