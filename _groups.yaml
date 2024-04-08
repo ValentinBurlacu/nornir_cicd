@@ -1,0 +1,115 @@
+---
+# cisco_nxos_group:
+#     username: "admin"
+#     password: "admin"
+#     platform: "nxos"
+#     data:
+#         vendor: "cisco"
+
+# csr_group:
+#     username: "cisco"
+#     password: "cisco"
+#     platform: "ios"
+#     connection_options:
+#         scrapli_netconf:
+#             extras:
+#                 port: 830
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
+#     data:
+#         vendor: "cisco"
+#         device_type: iosxe
+
+# xrv_group:
+#     username: "cisco"
+#     password: "cisco1234"
+#     platform: "iosxr"
+#     connection_options:
+#         scrapli_netconf:
+#             extras:
+#                 port: 830
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
+#     data:
+#         vendor: "cisco"
+#         device_type: iosxr
+
+# cisco_vios_group:
+#     username: "cisco"
+#     password: "cisco"
+#     platform: "ios"
+#     data:
+#         vendor: "cisco"
+
+# euro_group:
+#     username: "euro"
+#     password: "europass"
+#     data:
+#         ntp_server: "4.4.4.4"
+
+# usa_group:
+#     username: "usa"
+#     password: "usapass"
+#     data:
+#         ntp_server: "8.8.8.8"
+
+cisco_group:
+    username: "cisco"
+    password: "cisco"
+    platform: "ios"
+    data:
+        vendor: "cisco"
+connection_options:
+    scrapli_netconf:
+        extras:
+            port: 830
+            ssh_config_file: True
+            auth_strict_key: False
+            timeout_transport: 10
+    scrapli:
+        extras:
+            port: 22
+            ssh_config_file: True
+            auth_strict_key: False
+            timeout_transport: 10
+
+# arista_group:
+#     username: "arista"
+#     password: "arista"
+#     platform: "eos"
+#     port: "6030"
+#     data:
+#         vendor: "arista"
+#     connection_options:
+#         scrapli_netconf:
+#             extras:
+#                 port: 830
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
+#         scrapli:
+#             extras:
+#                 port: 22
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
+
+# junos_group:
+#     username: "juniper"
+#     password: "juniper1"
+#     platform: "junos"
+#     data:
+#         vendor: "juniper"
+
+north: {}
+#     username: "cisco"
+#     password: "cisco"
+
+south: {}
+#     username: "cisco"
+#     password: "cisco4"
+
+spine: {}
+leaf: {}

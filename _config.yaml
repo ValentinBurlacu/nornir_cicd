@@ -1,0 +1,38 @@
+---
+# Without plugins this is all that nornir's offering, Inventory managament and Concurent execution
+
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "_hosts.yaml"
+        group_file: "_groups.yaml"
+        defaults_file: "_defaults.yaml"
+        # connection_options:
+        #     netmiko:
+        #         extras:
+        #         conn_timeout: 20
+        #     paramiko:
+        #         extras:
+        #         conn_timeout: 20
+        #     scrapli:
+        #         extras:
+        #         conn_timeout: 20
+
+# inventory:
+#     plugin: NetBoxInventory2
+#     options:
+#         nb_url: "http://192.168.1.78:8000/"
+#         nb_token: "19f76e4c9338e8bc56f152b939f31f45a5de99e5"
+#         ssl_verify: false
+
+runner:
+    plugin: threaded
+    options:
+        num_workers: 10
+# To execute the teska, we need some kind of tool, like
+#   Scrapli
+#   Netmiko
+#   NAPALM
+
+logging:
+    enabled: False
