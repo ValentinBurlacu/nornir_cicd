@@ -11,7 +11,7 @@ from nornir.core.exceptions import NornirExecutionError
 
 # cf = "/Volumes/t7-2tb-blue/files/_drive_dropbox_files/Dropbox/develop/net_auto/_config.yaml"
 # nr = InitNornir(config_file=cf)
-# nr = InitNornir(config_file="_config.yaml")
+# nr = InitNornir(config_file="_config.yaml")a
 
 config_file=sys.argv[1]
 nr = InitNornir(config_file=config_file)
