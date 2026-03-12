@@ -1,44 +1,44 @@
 ---
 
-vios1:
-    # hostname: "192.168.1.135"
-    hostname: "vios1"
-    groups:
-      - cisco
-      # - spine
-      # - north
-    data:
-      role: "test"
+# vios1:
+#     # hostname: "192.168.1.135"
+#     hostname: "vios1"
+#     groups:
+#       - cisco
+#       # - spine
+#       # - north
+#     data:
+#       role: "test"
 
-vios2:
-    # hostname: "192.168.1.136"
-    hostname: "vios2"
-    groups:
-      - cisco
-      # - spine
-      # - north
-    data:
-      role: "test"
+# vios2:
+#     # hostname: "192.168.1.136"
+#     hostname: "vios2"
+#     groups:
+#       - cisco
+#       # - spine
+#       # - north
+#     data:
+#       role: "test"
 
-vios3:
-    # hostname: "192.168.1.137"
-    hostname: "vios3"
-    groups:
-      - cisco
-      # - leaf
-      # - south
-    data:
-      role: "test"
+# vios3:
+#     # hostname: "192.168.1.137"
+#     hostname: "vios3"
+#     groups:
+#       - cisco
+#       # - leaf
+#       # - south
+#     data:
+#       role: "test"
 
-vios4:
-    # hostname: "192.168.1.138"
-    hostname: "vios4"
-    groups:
-      - cisco
-      # - leaf
-      # - south7
-    data:
-      role: "prod"
+# vios4:
+#     # hostname: "192.168.1.138"
+#     hostname: "vios4"
+#     groups:
+#       - cisco
+#       # - leaf
+#       # - south7
+#     data:
+#       role: "prod"
 
 vios5:
     # hostname: "192.168.1.139"
