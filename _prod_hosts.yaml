@@ -1,36 +1,127 @@
 ---
-# core1:
-#     hostname: "192.168.1.157"
+
+# vios1:
+#     # hostname: "192.168.1.135"
+#     hostname: "vios1"
 #     groups:
-#         - csr_group
-# core2:
-#     hostname: "192.168.1.158"
+#       - cisco
+#       # - spine
+#       # - north
+#     data:
+#       role: "test"
+
+# vios2:
+#     # hostname: "192.168.1.136"
+#     hostname: "vios2"
 #     groups:
-#         - csr_group
-# core3:
-#     hostname: "192.168.1.159"
+#       - cisco
+#       # - spine
+#       # - north
+#     data:
+#       role: "test"
+
+# vios3:
+#     # hostname: "192.168.1.137"
+#     hostname: "vios3"
 #     groups:
-#         - csr_group
-# core4:
-#     hostname: "192.168.1.160"
+#       - cisco
+#       # - leaf
+#       # - south
+#     data:
+#       role: "test"
+
+vios4:
+    # hostname: "192.168.1.138"
+    hostname: "vios4"
+    groups:
+      - cisco
+      # - leaf
+      # - south7
+    data:
+      role: "prod"
+
+vios5:
+    # hostname: "192.168.1.139"
+    hostname: "vios5"
+    groups:
+      - cisco
+    data:
+      role: "prod"
+
+vios6:
+    # hostname: "192.168.1.140"
+    hostname: "vios6"
+    groups:
+      - cisco
+    data:
+      role: "prod"
+  
+# vios7:
+#     # hostname: "192.168.1.140"
+#     hostname: "vios6"
 #     groups:
-#         - csr_group
-# edge5:
-#     hostname: "192.168.1.161"
+#       - cisco
+#     data: {}
+
+# ceos7:
+#     hostname: "ceos7"
+#     # hostname: "192.168.1.141"
+#     username: "arista"
+#     password: "arista"
+#     # port: "6030"
 #     groups:
-#         - csr_group
-# edge6:
-#     hostname: "192.168.1.162"
+#         - arista
+#     data:
+#         location: "East"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65004"
+
+# ceos8:
+#     hostname: "ceos8"
+#     # hostname: "192.168.1.142"
+#     username: "arista"
+#     password: "arista"
+#     # port: "6030"
 #     groups:
-#         - csr_group
-# edge7:
-#     hostname: "192.168.1.163"
+#         - arista
+#     data:
+#         location: "East"
+#         layer: "Leaf"
+#         contact: "CAdmin@home.com"
+#         ASN: "65004"
+
+# csr1:
+#     hostname: "csr1"
+#     # hostname: "192.168.1.144"
 #     groups:
-#         - csr_group
-# edge8:
-#     hostname: "192.168.1.164"
+#       - csr
+#     data: 
+#         hostname: "csr1"
+
+# csr2:
+#     hostname: "csr2"
+#     # hostname: "192.168.1.145"
 #     groups:
-#         - csr_group
+#       - csr
+#     data:
+#         hostname: "csr2"
+
+# xrv1:
+#     hostname: "xrv1"
+#     groups:
+#         - xrv
+
+# xrv2:
+#     hostname: "xrv2"
+#     groups:
+#         - xrv
+
+# xrv3:
+#     hostname: "192.168.1.144"
+#     groups:
+#         - xrv_group
+
 
 # nxos1:
 #     hostname: "192.168.1.151"
@@ -73,30 +164,39 @@
 #     data:
 #         role: "Leaf"
 
-# csr1:
-#     hostname: "192.168.1.140"
+# core1:
+#     hostname: "192.168.1.157"
+#     groups:
+#         - csr_group
+# core2:
+#     hostname: "192.168.1.158"
+#     groups:
+#         - csr_group
+# core3:
+#     hostname: "192.168.1.159"
+#     groups:
+#         - csr_group
+# core4:
+#     hostname: "192.168.1.160"
+#     groups:
+#         - csr_group
+# edge5:
+#     hostname: "192.168.1.161"
+#     groups:
+#         - csr_group
+# edge6:
+#     hostname: "192.168.1.162"
+#     groups:
+#         - csr_group
+# edge7:
+#     hostname: "192.168.1.163"
+#     groups:
+#         - csr_group
+# edge8:
+#     hostname: "192.168.1.164"
 #     groups:
 #         - csr_group
 
-# csr2:
-#     hostname: "192.168.1.141"
-#     groups:
-#         - csr_group
-
-# xrv1:
-#     hostname: "192.168.1.142"
-#     groups:
-#         - xrv_group
-
-# xrv2:
-#     hostname: "192.168.1.143"
-#     groups:
-#         - xrv_group
-
-# xrv3:
-#     hostname: "192.168.1.144"
-#     groups:
-#         - xrv_group
 
 # vios11:
 #     hostname: vios11
@@ -130,102 +230,6 @@
 #         role: "Spoke"
 #         dmvpn: "yes"
 
-vios1:
-    # hostname: "192.168.1.135"
-    hostname: "vios1"
-    groups:
-        - cisco_group
-        - spine
-    data:
-        location: "West"
-        layer: "Spine"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Spine"
-
-vios2:
-    # hostname: "192.168.1.136"
-    hostname: "vios2"
-    groups:
-        - cisco_group
-        - spine
-    data:
-        location: "West"
-        layer: "Spine"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Spine"
-
-vios3:
-    # hostname: "192.168.1.137"
-    hostname: "vios3"
-    groups:
-        - cisco_group
-        - leaf
-    data:
-        location: "West"
-        layer: "Leaf"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Leaf"
-
-vios4:
-    hostname: "192.168.1.138"
-    groups:
-        - cisco_group
-        - leaf
-    data:
-        location: "West"
-        layer: "Leaf"
-        contact: "CAdmin@home.com"
-        ASN: "65001"
-        role: "Leaf"
-
-# vios5:
-#     hostname: "192.168.1.139"
-#     groups:
-#         - cisco_group
-#     data:
-#         location: "East"
-#         layer: "Spine"
-#         contact: "CAdmin@home.com"
-#         ASN: "65001"
-#         role: "Leaf"
-
-# vios6:
-#     hostname: "192.168.1.140"
-#     groups:
-#         - cisco_group
-#     data:
-#         location: "East"
-#         layer: "Spine"
-#         contact: "CAdmin@home.com"
-#         ASN: "65001"
-#         role: "Leaf"
-
-# ceos7:
-#     hostname: "192.168.1.141"
-#     username: "arista"
-#     password: "arista"
-#     groups:
-#         - arista_group
-#     data:
-#         location: "East"
-#         layer: "Leaf"
-#         contact: "CAdmin@home.com"
-#         ASN: "65004"
-
-# ceos8:
-#     hostname: "192.168.1.142"
-#     username: "arista"
-#     password: "arista"
-#     groups:
-#         - arista_group
-#     data:
-#         location: "East"
-#         layer: "Leaf"
-#         contact: "CAdmin@home.com"
-#         ASN: "65004"
 
 # vios7:
 #     hostname: "192.168.1.141"
@@ -248,7 +252,8 @@ vios4:
 #         ASN: "65001"
 
 # iou1:
-#     hostname: "192.168.1.143"
+#     # hostname: "192.168.1.143"
+#     hostname: "iou1"
 #     groups:
 #         - cisco_group
 #     data:
@@ -289,12 +294,13 @@ vios4:
 #     data:
 #         role: "Leaf"
 
-# jun1:
-#     hostname: "192.168.1.139"
-#     groups:
-#         - junos_group
-#     data:
 
+# ----
+# vmx1:
+#   hostname: "192.168.1.139"
+#   groups:
+#   - junos
+#   data: {}
 
 # vios-p1:
 #     hostname: "vios-p1"

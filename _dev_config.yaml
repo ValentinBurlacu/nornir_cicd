@@ -1,0 +1,50 @@
+---
+# Without plugins this is all that nornir's offering, Inventory managament and Concurent execution
+
+inventory:
+  plugin: SimpleInventory
+  options:
+      host_file: "/home/val/cicd/_dev_hosts.yaml"
+      group_file: "/home/val/cicd/_groups.yaml"
+      defaults_file: "/home/val/cicd/_defaults.yaml"
+      # connection_options:
+      #     netmiko:
+      #         extras:
+      #         conn_timeout: 20
+      #     paramiko:
+      #         extras:
+      #         conn_timeout: 20
+      #     scrapli:
+      #         extras:
+      #         conn_timeout: 20
+
+  # plugin: NetBoxInventory2
+  # options:
+  #   # nb_url: "http://192.168.1.113:8000/"
+  #   # nb_token: "19f76e4c9338e8bc56f152b939f31f45a5de99e5" # MAC key
+  #   nb_url: "http://192.168.1.100:8000/"
+  #   # nb_token: "QW3cP3569bvf6g05p7KVwqoNwIYPDLLiSAEv7EgX" # PC key v2
+  #   nb_token: "pQSWLD2lOAeNeNttXse2AvHPVB5KutIzTJVX69Tg" # PC key v1
+  #   ssl_verify: false
+  #   defaults_file: "/Volumes/t7-2tb-blue/files/_drive_google_files/develop/nornir/_defaults.yaml"
+
+runner:
+  plugin: threaded
+  options:
+    num_workers: 10 # number of threads
+  # plugin: serial
+# To execute the teska, we need some kind of tool, like
+#   Scrapli
+#   Netmiko
+#   NAPALM
+
+logging: # to halt nornir native logging so that all logging provided by pytest
+  enabled: False
+
+connection_options:
+  scrapli:
+    # platform: "ios"
+    extras:
+      auth_strict_key: False
+      transport: system
+      transport_options: { "open_cmd": [ "-o", "KexAlgorithms=+diffie-hellman-group1-sha1" ] }

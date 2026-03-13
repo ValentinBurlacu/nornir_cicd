@@ -6,10 +6,20 @@
 #     data:
 #         vendor: "cisco"
 
-# csr_group:
+# csr:
 #     username: "cisco"
 #     password: "cisco"
 #     platform: "ios"
+#     # platform: scrapli_netconf
+#     groups:
+#         - "global"
+#     data:
+#         vendor: "cisco"
+#         device_type: iosxe
+#         ntp_server: "10.1.200.200"
+#         syslog_server: "10.1.200.201"
+
+# global:
 #     connection_options:
 #         scrapli_netconf:
 #             extras:
@@ -17,11 +27,11 @@
 #                 ssh_config_file: True
 #                 auth_strict_key: False
 #                 timeout_transport: 10
-#     data:
-#         vendor: "cisco"
-#         device_type: iosxe
+#                 transport: "paramiko"
+#         netmiko:
+#             extras: global_delay_factor
 
-# xrv_group:
+# xrv:
 #     username: "cisco"
 #     password: "cisco1234"
 #     platform: "iosxr"
@@ -55,12 +65,13 @@
 #     data:
 #         ntp_server: "8.8.8.8"
 
-cisco_group:
+cisco:
     # username: "cisco"
     # password: "cisco"
     platform: "ios"
     data:
         vendor: "cisco"
+        ntp_server: "6.0.0.0"
 connection_options:
     scrapli_netconf:
         extras:
@@ -74,8 +85,14 @@ connection_options:
             ssh_config_file: True
             auth_strict_key: False
             timeout_transport: 10
+    netmiko:
+        extras:
+            global_delay_factor: 4
+    napalm:
+        extras:
+            global_delay_factor: 4
 
-# arista_group:
+# arista:
 #     username: "arista"
 #     password: "arista"
 #     platform: "eos"
@@ -96,20 +113,24 @@ connection_options:
 #                 auth_strict_key: False
 #                 timeout_transport: 10
 
-# junos_group:
+# junos:
 #     username: "juniper"
 #     password: "juniper1"
 #     platform: "junos"
 #     data:
 #         vendor: "juniper"
 
-north: {}
-#     username: "cisco"
-#     password: "cisco"
+# north: {}
+#     # username: "val"
+#     # password: "cisconorth"
 
-south: {}
-#     username: "cisco"
-#     password: "cisco4"
+# south: {}
+#     # username: "val"
+#     # password: "ciscosouth"
 
-spine: {}
-leaf: {}
+# south7: {}
+#     # username: "val"
+#     # password: "ciscosouth7"
+
+# spine: {}
+# leaf: {}

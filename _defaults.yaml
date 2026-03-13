@@ -1,9 +1,11 @@
 ---
 
 # data: {}
+# username: "val"
 # username: "jradmin"
 # password: "jradmin1"
 # username: "cisco"
+# username: "val"
 # password: "cisco"
 # username: "euro"
 # password: "europass"
@@ -11,14 +13,14 @@
 # platform: "ios"
 
 connection_options:
-    scrapli:
-      # platform: "ios"
-      extras:
-        auth_strict_key: False
-        transport: system
-        transport_options: {"open_cmd": ["-o", "KexAlgorithms=+diffie-hellman-group1-sha1"]}
-        # transport_options: {"open_cmd": ["-o", "KexAlgorithms=+diffie-hellman-group1-sha1"], ["-c", "ssh-rsa,3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com"]}
-        # transport_options: {"open_cmd": ["-c", "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com"]}
+  scrapli:
+    # platform: "ios"
+    extras:
+      auth_strict_key: False
+      transport: system
+      transport_options: { "open_cmd": [ "-o", "KexAlgorithms=+diffie-hellman-group1-sha1" ] }
+      # transport_options: {"open_cmd": ["-o", "KexAlgorithms=+diffie-hellman-group1-sha1"], ["-c", "ssh-rsa,3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com"]}
+      # transport_options: {"open_cmd": ["-c", "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com"]}
 
 data:
-    ntp_server: "5.5.5.5"
+  ntp_server: "6.0.0.1"

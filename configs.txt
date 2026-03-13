@@ -1,0 +1,4 @@
+ntp server 1.1.1.744
+ntp server 1.1.1.844
+router ospf 4$
+network 0.0.0.0 0.0.0.0 area 0
