@@ -4,7 +4,7 @@
 inventory:
   plugin: SimpleInventory
   options:
-      host_file: "/home/val/cicd/_hosts.yaml"
+      host_file: "/home/val/cicd/_dev_hosts.yaml"
       group_file: "/home/val/cicd/_groups.yaml"
       defaults_file: "/home/val/cicd/_defaults.yaml"
       # connection_options:

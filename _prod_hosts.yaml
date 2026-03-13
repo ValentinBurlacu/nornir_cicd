@@ -30,15 +30,15 @@
 #     data:
 #       role: "test"
 
-# vios4:
-#     # hostname: "192.168.1.138"
-#     hostname: "vios4"
-#     groups:
-#       - cisco
-#       # - leaf
-#       # - south7
-#     data:
-#       role: "prod"
+vios4:
+    # hostname: "192.168.1.138"
+    hostname: "vios4"
+    groups:
+      - cisco
+      # - leaf
+      # - south7
+    data:
+      role: "prod"
 
 vios5:
     # hostname: "192.168.1.139"

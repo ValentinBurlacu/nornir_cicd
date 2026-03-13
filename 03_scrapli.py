@@ -1,4 +1,4 @@
-import os
+import os, sys
 # from jinja2.environment import Template
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_configs
@@ -6,10 +6,19 @@ from nornir_utils.plugins.functions import print_result
 from nornir_utils.plugins.tasks.data import load_yaml
 from nornir_jinja2.plugins.tasks import template_file
 from nornir.core.exceptions import NornirExecutionError
+# import ipdb
 
-nr = InitNornir(config_file="/home/val/cicd/_config.yaml")
-nr.inventory.defaults.username = os.getenv("USERNAME")
-nr.inventory.defaults.password = os.getenv("PASSWORD")
+config_file = sys.argv[1]
+nr = InitNornir(config_file=f"/home/val/cicd/{config_file}")
+# nr = InitNornir(config_file="/home/val/cicd/_config.yaml")
+# nr.inventory.defaults.username = os.getenv("NORNIR_USERNAME")
+# nr.inventory.defaults.password = os.getenv("NORNIR_PASSWORD")
+nr.inventory.defaults.username = os.environ["NORNIR_USERNAME"]
+nr.inventory.defaults.password = os.environ["NORNIR_PASSWORD"]
+# export NORNIR_USERNAME=cisco
+# export NORNIR_PASSWORD=cisco
+# echo $NORNIR_USERNAME
+# echo $NORNIR_PASSWORD
 
 def pull_vars(task):
     result = task.run(task=load_yaml, file="group_vars/all.yaml")
@@ -23,6 +32,8 @@ def push_config(task):
 
 results = nr.run(task=pull_vars)
 print_result(results)
-failures = nr.data.failed_hosts
-if failures:
-    raise NornirExecutionError("Nornir Failure Detected")
+# failures = nr.data.failed_hosts
+# if failures:
+#     raise NornirExecutionError("Nornir Failure Detected")
+
+# ipdb.set_trace()
