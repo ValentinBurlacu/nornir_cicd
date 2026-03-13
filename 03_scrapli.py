@@ -1,3 +1,4 @@
+import os
 # from jinja2.environment import Template
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_configs
@@ -7,6 +8,8 @@ from nornir_jinja2.plugins.tasks import template_file
 from nornir.core.exceptions import NornirExecutionError
 
 nr = InitNornir(config_file="/home/val/cicd/_config.yaml")
+nr.inventory.defaults.username = os.getenv("USERNAME")
+nr.inventory.defaults.password = os.getenv("PASSWORD")
 
 def pull_vars(task):
     result = task.run(task=load_yaml, file="group_vars/all.yaml")

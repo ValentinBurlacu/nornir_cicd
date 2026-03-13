@@ -6,45 +6,45 @@
 #     data:
 #         vendor: "cisco"
 
-csr:
-    username: "cisco"
-    password: "cisco"
-    platform: "ios"
-    # platform: scrapli_netconf
-    groups:
-        - "global"
-    data:
-        vendor: "cisco"
-        device_type: iosxe
-        ntp_server: "10.1.200.200"
-        syslog_server: "10.1.200.201"
+# csr:
+#     username: "cisco"
+#     password: "cisco"
+#     platform: "ios"
+#     # platform: scrapli_netconf
+#     groups:
+#         - "global"
+#     data:
+#         vendor: "cisco"
+#         device_type: iosxe
+#         ntp_server: "10.1.200.200"
+#         syslog_server: "10.1.200.201"
 
-global:
-    connection_options:
-        scrapli_netconf:
-            extras:
-                port: 830
-                ssh_config_file: True
-                auth_strict_key: False
-                timeout_transport: 10
-                transport: "paramiko"
-        netmiko:
-            extras: global_delay_factor
+# global:
+#     connection_options:
+#         scrapli_netconf:
+#             extras:
+#                 port: 830
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
+#                 transport: "paramiko"
+#         netmiko:
+#             extras: global_delay_factor
 
-xrv:
-    username: "cisco"
-    password: "cisco1234"
-    platform: "iosxr"
-    connection_options:
-        scrapli_netconf:
-            extras:
-                port: 830
-                ssh_config_file: True
-                auth_strict_key: False
-                timeout_transport: 10
-    data:
-        vendor: "cisco"
-        device_type: iosxr
+# xrv:
+#     username: "cisco"
+#     password: "cisco1234"
+#     platform: "iosxr"
+#     connection_options:
+#         scrapli_netconf:
+#             extras:
+#                 port: 830
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
+#     data:
+#         vendor: "cisco"
+#         device_type: iosxr
 
 # cisco_vios_group:
 #     username: "cisco"
@@ -66,8 +66,8 @@ xrv:
 #         ntp_server: "8.8.8.8"
 
 cisco:
-    username: "cisco"
-    password: "cisco"
+    # username: "cisco"
+    # password: "cisco"
     platform: "ios"
     data:
         vendor: "cisco"
@@ -92,26 +92,26 @@ connection_options:
         extras:
             global_delay_factor: 4
 
-arista:
-    username: "arista"
-    password: "arista"
-    platform: "eos"
-    port: "6030"
-    data:
-        vendor: "arista"
-    connection_options:
-        scrapli_netconf:
-            extras:
-                port: 830
-                ssh_config_file: True
-                auth_strict_key: False
-                timeout_transport: 10
-        scrapli:
-            extras:
-                port: 22
-                ssh_config_file: True
-                auth_strict_key: False
-                timeout_transport: 10
+# arista:
+#     username: "arista"
+#     password: "arista"
+#     platform: "eos"
+#     port: "6030"
+#     data:
+#         vendor: "arista"
+#     connection_options:
+#         scrapli_netconf:
+#             extras:
+#                 port: 830
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
+#         scrapli:
+#             extras:
+#                 port: 22
+#                 ssh_config_file: True
+#                 auth_strict_key: False
+#                 timeout_transport: 10
 
 # junos:
 #     username: "juniper"
