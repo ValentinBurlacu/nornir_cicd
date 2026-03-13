@@ -12,7 +12,7 @@ config_file = sys.argv[1]
 nr = InitNornir(config_file=f"/home/val/cicd/{config_file}")
 # nr = InitNornir(config_file="/home/val/cicd/_config.yaml")
 # nr.inventory.defaults.username = os.getenv("NORNIR_USERNAME")
-# nr.inventory.defaults.password = os.getenv("NORNIR_PASSWORD")
+# nr.inventory.defaults.password = os.getenv("NORNIR_PASSWORD")x
 nr.inventory.defaults.username = os.environ["NORNIR_USERNAME"]
 nr.inventory.defaults.password = os.environ["NORNIR_PASSWORD"]
 # export NORNIR_USERNAME=cisco
